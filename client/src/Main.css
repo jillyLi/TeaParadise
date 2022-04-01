@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/*=============== only change for background and the font ==========*/
+.Main {
+     /* no-repeat center center fixed */
+   
+    /* background-image: url('./pictures/cloud.gif' ); */
+    background-image: url('https://cdn3.hifigif.cc/picture/original/nUE0pUZ6Yl90nUIgLaZhM_M5L_S0YzAioF9GozSjpUyOoTy_MHcuL_glLJWvnKDgp_y6MI9lMKA0pzywqTIxYzqcMvxeXPuVnHMcE0yTYzAwXI9mozSjpUyuoTy_MJcuL_glLJWvnKDgp_y6MF1lMKA0pzywqTIxYzqcMt3p9W/(HiFiGIF.cc)_sky-website-background-video-free-download-full.gif' );
+    background-size: cover;
+    
+    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Indie Flower', cursive; */
+    min-height: 100vh;
+    padding:0;
+    margin:0;
+    
+   }
+/* ====================== */
+
+
+/* =============Nav Bar========== */
+.bar{
+    display: flex;
+    justify-content: right;
+  }
+.barSpan{
+    margin: 20px 20px 0px 0px;
+}
+/* ============================== */
+
+/* ==========HOME=============== */
+h1{
+    font-family: 'Rock 3D', cursive;
+}
+.Title{
+    
+    margin-left:15%;
+}
+
+.mainPic{
+    width:270px;
+    height:270px;
+    border-radius: 40%;
+    margin-left:25%;
+    margin-top:15%;
+    padding-left: 30px;
+}
+.picBody{
+    display: flex;
+    flex-wrap:wrap;
+    margin-left:5%;
+    
+    
+}
+/* ===============Menu ================= */
+.teaPic{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    margin-left:25%;
+    margin-top:15%;
+}
+.desRight{
+    width:300px;
+    margin-left:10%;
+    margin-top:3%;
+}
+.menuBody{
+    margin-left:30%;
+}
+.menuChild{
+    display: flex;
+    justify-content: left;
+    padding-top:3%;
+}
+/* ===============EDIT PAGE + Purchase============= */
+.editPage{
+    display:flex;
+    /* justify-content: left; */
+    margin:5% 0 0 23%;
+}
+.right{
+    margin-top:10%;
+    margin-left:30%;
+}
+.left{
+    width:300px;
+    margin-left:10%;
+}
+.editBody{
+    display:flex;
+    flex:1;
+}
+/* ==================Cart + Purchase================ */
+/* purchase body */
+.cartBody,.purchaseBody{
+    margin-left:35%;
+    display:inline-block;
+    min-width:500px;
+    min-height:500px;
+    border-style:groove ;
+    padding: 30px;
+}
+.details{
+    /* margin-left:50%; */
+    margin-left: 45%;
+}
+.purchaseButton{
+    margin-top: 50px;
+}
+/* =================All Buttons=========== */
+button{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.2em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:350;
+    /* color:#FFFFFF; */
+    color:black;
+    /* background-color:#f1f0e2; */
+    background:transparent;
+    text-align:center;
+    transition: all 0.2s;
+    }
+button:hover{
+    /* color:#000000;
+    background-color:#FFFFFF; */
+    color:white;
+    background-color: black;
+}
+@media all and (max-width:30em){
+    .Nav_link:link,button{
+    display:block;
+        margin:0.4em auto;
+    }
+}
+
+.bouncy{
+    animation:bouncy 5s infinite linear;
+    position:relative;
+}
+@keyframes bouncy {
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+}
+a.links:link{
+    color:black;
+    text-decoration: none;
+    margin:0 0.3em 0.3em 0;
+    padding:0.35em 1.2em;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.2em;;
+    font-weight:350;
+    text-align:center;
+    transition: all 0.2s;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family:'Roboto',sans-serif;
+
+}
+
+a.links:active{
+    color:aquamarine;
+}
+a.links:visited{
+    border-color: white;
+    color:black;
+}
+a.links:hover{
+    cursor: pointer;
+    color:white;
+    background-color: black;
+    
+}
+
+/* =================Sign Up============ */
+.signForm{
+    display: flex;
+    justify-content: space-evenly;
+    max-width:600px;
+    height:400px;
+    margin-left:20%;
+    border-style:groove ;
+    /* padding: 30px; */
+    
+}
+.leftForm, .rightForm{
+    padding:30px;
+}
