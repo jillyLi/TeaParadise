@@ -1,4 +1,4 @@
-<h2> This is an ongoing eCommerce Site that I designed for milktea store.🧋 
+<h2> This is an ongoing eCommerce Site that I designed for milktea store.🧋 <br>
 In this project I used M.E.R.N (mangoDB, Express, React, Node.js)to create the application and used Postman and MangoDB to personalized temporary database. I experienced to use Stripe API for card authorization.</h2>
 
 
