@@ -146,7 +146,7 @@ const Cart=(props)=>{
                         <br />
                         {click
                             ?
-                             <p style={{color:"red", marginLeft:"15%"}}>Warning: {err}</p>
+                             <p style={{color:"red", marginLeft:"15%"}}> {err}</p>
                              :
                              ""
     

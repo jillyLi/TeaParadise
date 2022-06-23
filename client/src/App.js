@@ -12,6 +12,8 @@ import Menu from './components/Menu';
 import Purchase from './components/Purchase';
 import Edit from './components/Edit';
 import SignUp2 from './components/SignUp2';
+import Slider from './components/Slider';
+import { SliderData } from './components/SliderData';
 
 function App() {
 
@@ -22,7 +24,8 @@ function App() {
       <Switch>
 
         <Route path="/teas">
-          <Main />
+          <Main slides={SliderData}/>
+          {/* <Slider slides={SliderData}/> */}
         </Route>
 
         <Route path="/signUp">

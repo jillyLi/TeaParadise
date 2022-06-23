@@ -3,9 +3,12 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import '../App.css';
 import '../Main.css';
+import "../Slider.css";
+import { SliderData } from './SliderData'
+import {FaArrowAltCircleRight,FaArrowAltCircleLeft} from 'react-icons/fa';
+import "../Slider.css"
 
-
-const Main =(props) => {
+const Main =({slides}) => {
     const [teas, setTeas] = useState([]);
     const [length, setLength]=useState(0);
     useEffect(()=>{
@@ -19,16 +22,29 @@ const Main =(props) => {
         axios.get("http://localhost:8000/api/teasInCart")
             .then(res=>{
                 // console.log("here length:" +res.data.length);
+                // const [length, setLength]=useState(0);
                 setLength(res.data.length);
             })
             .catch(err=> console.log(err));
     },[])
 
-    // const changePic=(e)=>{
-    //     e.preventDefault();
+    
+    const[curr, setCurr]=useState(0);
+    const len=slides.length;
+    // console.log("len:" +length);
 
+    const nextSlide=()=>{
+        setCurr(curr===len-1 ? 0 : curr+1);
+    };
+    const prevSlide=()=>{
+        setCurr(curr===0 ? len-1 : curr-1);
+    };
+    
+    if(!Array.isArray(slides)|| slides.length<=0){
+        return null;
+    }
+    
 
-    // }
     return (
         
         <div className="Main">
@@ -40,10 +56,37 @@ const Main =(props) => {
             </div>
             <div className="header">
                 <h1 className="Title">TEA PARADISE </h1>
-                <p className="slogan" style={{marginLeft:"50%"}}>-Just need a bit of sweetness to sweeten up your day- </p>
+                {/* a little bit of code /cold and taste */}
+                <p className="slogan" style={{marginLeft:"50%"}}>" a LITTLE bit of SWEET, a LITTLE bit of TASTE " -- <img src={require('./papaJ.png')} style={{width:"30px",height:"30px", borderRadius:"60%",objectFit:"cover", paddingTop:"5px"}}/></p>
                 <hr />
             </div>
-            <div className="picBody">
+           {/* ===========slider==== */}
+           <section className="slider">
+                <FaArrowAltCircleLeft className="left-arrow" onClick={()=>prevSlide()}/>
+                <FaArrowAltCircleRight className="right-arrow" onClick={()=>nextSlide()}/>
+                {
+                SliderData.map((slide,ind)=>{
+                    return (
+                        <div className={ind === curr ? 'slide active' : 'slide'} key={ind}>
+                        
+                        {ind ===curr && (
+                            <img src={slide.image} alt="sliderImg" className="image"/>
+
+
+                        )}
+                        </div>
+                    
+                    );
+                
+                })}
+
+
+            </section>
+
+
+
+            {/* ===============================  working part  */}
+            {/* <div className="picBody">
             
                 
                  {
@@ -58,7 +101,7 @@ const Main =(props) => {
                 })
                 } 
                  
-            </div>
+            </div> */}
         </div>
     )
 }
